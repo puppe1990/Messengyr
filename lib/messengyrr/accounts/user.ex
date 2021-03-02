@@ -1,4 +1,4 @@
-defmodule Messengyrr.User do
+defmodule Messengyrr.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -6,6 +6,7 @@ defmodule Messengyrr.User do
     field :email, :string, unique: true
     field :encrypted_password, :string
     field :username, :string, unique: true
+    field :password, :string, virtual: true
 
     timestamps()
   end
